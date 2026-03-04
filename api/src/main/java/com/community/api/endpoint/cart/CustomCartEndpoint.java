@@ -46,6 +46,7 @@ public class CustomCartEndpoint extends CartEndpoint {
     @RequestMapping(value = "", method = RequestMethod.GET)
     public OrderWrapper findCartForCustomer(HttpServletRequest request) {
         try {
+            System.out.println("returning cart..");
             return super.findCartForCustomer(request);
         } catch (Exception e) {
             // if we failed to find the cart, create a new one
